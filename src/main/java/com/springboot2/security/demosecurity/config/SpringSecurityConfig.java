@@ -2,12 +2,10 @@ package com.springboot2.security.demosecurity.config;
 
 import com.springboot2.security.demosecurity.error.MyAccessDeniedHandler;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 
 // http://docs.spring.io/spring-boot/docs/current/reference/html/howto-security.html
 // Switch off the Spring Boot security configuration
@@ -54,11 +52,11 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter
                 .exceptionHandling().accessDeniedHandler(accessDeniedHandler);
     }
 
-    @Bean
+    /*@Bean
     public AuthenticationSuccessHandler successHandler()
     {
         return new MyCustomLoginSuccessHandler();
-    }
+    }*/
 
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception

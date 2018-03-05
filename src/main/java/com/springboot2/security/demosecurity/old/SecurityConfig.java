@@ -1,9 +1,5 @@
 package com.springboot2.security.demosecurity.old;
 
-/**
- * Created by Alem D.
- * Date: 02.03.2018
- */
 /*
 public class SecurityConfig  extends WebSecurityConfigurerAdapter
 {

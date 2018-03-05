@@ -9,10 +9,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-/**
- * Created by Alem D.
- * Date: 04.03.2018
- */
 @Deprecated
 public class MyCustomLoginSuccessHandler extends SavedRequestAwareAuthenticationSuccessHandler
 {
