@@ -7,8 +7,6 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
-// http://docs.spring.io/spring-boot/docs/current/reference/html/howto-security.html
-// Switch off the Spring Boot security configuration
 @Configuration
 public class SpringSecurityConfig extends WebSecurityConfigurerAdapter
 {
@@ -61,29 +59,9 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception
     {
-
         auth.inMemoryAuthentication()
                 .withUser("user").password("{noop}user").roles("USER")
                 .and()
                 .withUser("admin").password("{noop}admin").roles("ADMIN");
     }
-
-    // withUser("user").password("{noop}password").roles("USER")
-
-    /*@Override
-    public void configure(WebSecurity web) throws Exception
-    {
-        web.ignoring().antMatchers("/webjars/**");
-        web.ignoring().antMatchers("/css/**","/fonts/**","/libs/**");
-    }*/
-
-    /*
-    //Spring Boot configured this already.
-    @Override
-    public void configure(WebSecurity web) throws Exception {
-        web
-                .ignoring()
-                .antMatchers("/resources/**", "/static/**", "/css/**", "/js/**", "/images/**");
-    }*/
-
 }
