@@ -1,3 +1,4 @@
-# springboot2 security demo
+# springboot 2 security demo  
 
-mvc, thymeleaf
+SpringBoot 2 and Thymeleaf integration using Spring MVC
+
